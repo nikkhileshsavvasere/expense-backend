@@ -2,10 +2,10 @@
     "name": "backend",
     "version": "1.0.0",
     "description": "",
-    "main": "src/app.js",
+    "main": "server.js",
     "scripts": {
         "build-sdk": "cd ../../; npm i; npm run build",
-        "start": "node src/app.js"
+        "start": "server.js"
     },
     "author": "",
     "license": "ISC",
