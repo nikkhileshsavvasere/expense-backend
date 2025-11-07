@@ -8,9 +8,8 @@ import reportRoute from "./src/routes/reports.js";
 const PORT = 3000;
 
 const app = express();
-const origin =
-    "postgresql://postgres.lnkaoweojmpzeljoecoc:Nutun@17@aws-1-ap-southeast-2.pooler.supabase.com:6543/postgres";
-dbconnect("postgres", "postgres.lnkaoweojmpzeljoecoc", "Nutun@17");
+const origin = process.env.DB_URI;
+dbconnect("postgres", process.env.DB_USERNAME, process.env.DB_PASSWORD);
 
 app.use(express.json());
 dotenv.config();
