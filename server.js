@@ -1,10 +1,10 @@
 import express from "express";
-import { dbconnect } from "./database/dbconnection.js";
+import { dbconnect } from "./src/database/dbconnection.js";
 import cors from "cors";
 import dotenv from "dotenv";
-import authenticationRoute from "./routes/authentication.js";
-import transactionRoute from "./routes/transactions.js";
-import reportRoute from "./routes/reports.js";
+import authenticationRoute from "./src/routes/authentication.js";
+import transactionRoute from "./src/routes/transactions.js";
+import reportRoute from "./src/routes/reports.js";
 const PORT = 3000;
 
 const app = express();
