@@ -1,13 +1,12 @@
 import { Sequelize } from "sequelize";
 import transactionModel from "../model/transactionSchema.js";
 import userModel from "../model/userSchema.js";
-import pg from "pg";
 
 let Transaction = null;
 let User = null;
 const dbconnect = async (database, dbusername, dbpassword) => {
     const sequelize = new Sequelize(database, dbusername, dbpassword, {
-        host: "db.lnkaoweojmpzeljoecoc.supabase.co",
+        host: "aws-1-ap-southeast-2.pooler.supabase.com",
         dialect: "postgres",
     });
 
