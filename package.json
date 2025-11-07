@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "build-sdk": "cd ../../; npm i; npm run build",
-        "start": "server.js"
+        "start": "node server.js"
     },
     "author": "",
     "license": "ISC",

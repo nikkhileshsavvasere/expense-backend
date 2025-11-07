@@ -28,9 +28,9 @@ const checkAuth = (req, res, next) => {
     next();
 };
 
-app.use("/.netlify/functions/users", authenticationRoute);
-app.use("/.netlify/functions/transactions", checkAuth, transactionRoute);
-app.use("/.netlify/functions/reports", checkAuth, reportRoute);
+app.use("/users", authenticationRoute);
+app.use("/transactions", checkAuth, transactionRoute);
+app.use("/reports", checkAuth, reportRoute);
 
 app.use((error, req, res, next) => {
     if (res.headerSent) {

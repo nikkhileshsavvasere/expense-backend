@@ -9,7 +9,6 @@ const dbconnect = async (database, dbusername, dbpassword) => {
     const sequelize = new Sequelize(database, dbusername, dbpassword, {
         host: "db.lnkaoweojmpzeljoecoc.supabase.co",
         dialect: "postgres",
-        dialectModule: pg,
     });
 
     try {
