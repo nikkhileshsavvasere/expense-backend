@@ -25,7 +25,7 @@ const addTransaction = async (req, res) => {
         const newTransaction = await Transaction.build({
             id: uuid(),
             productName,
-            price,
+            price: float(price),
             category,
             paymentMode,
             userId: tokenValue.userId,
@@ -88,7 +88,7 @@ const updateTransaction = async (req, res) => {
         const updatedTransaction = await Transaction.update(
             {
                 productName,
-                price,
+                price: float(price),
                 category,
                 paymentMode,
                 updatedAt: Moment().format(),
